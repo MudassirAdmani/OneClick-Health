@@ -1,0 +1,45 @@
+/* Universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.h-font {
+  font-family: "Merienda", cursive;
+}
+.h-line {
+  width: 150px;
+  height: 2px;
+  margin: 0 auto;
+}
+.btn-orange {
+  background-color: #33c0fd;
+  transition: 0.3s;
+}
+.btn-orange:hover {
+  background-color: #089ddf;
+}
+.btn-purple {
+  background-color: #b76282;
+  transition: 0.3s;
+}
+.btn-purple:hover {
+  background-color: #96405e;
+}
+.text-purple {
+  color: #b76282;
+}
+.text-orange {
+  color: #de9549;
+}
+.border-orange {
+  border-top: 4px solid #de9549;
+}
+.Card {
+  transition: 0.3s;
+}
+.Card:hover {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

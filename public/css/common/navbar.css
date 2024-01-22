@@ -1,0 +1,35 @@
+/* Navbar */
+.nav-link {
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #000;
+}
+.nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #33c0fd;
+  display: block;
+  transition: 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+@media (max-width: 324px) {
+  .navbar-brand .NavBrand {
+    display: none;
+  }
+}
+/* Register / Login */
+.registerModal,
+.loginModal {
+  background-image: url("../../images/navbar/back.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
