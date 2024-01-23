@@ -8,11 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function redirect() {
+    public function redirect()
+    {
         $usertype = Auth::user()->role;
-        if($usertype == 0){
+        if ($usertype == 0) {
             return view('home.index');
-        } else {
+        } else if ($usertype == 1) {
             return view('dashboard.index');
         }
     }
