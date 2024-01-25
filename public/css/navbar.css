@@ -31,12 +31,3 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/* Carousel */
-.banner {
-    height: 500px;
-}
-@media (max-width: 768px) {
-    .banner {
-        height: auto;
-    }
-}
