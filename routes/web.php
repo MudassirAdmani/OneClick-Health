@@ -33,3 +33,7 @@ Route::get('/redirect',[HomeController::class, 'redirect']);
 // default route
 
 Route::get('/',[HomeController::class, 'index']);
+
+// dashboard route
+
+Route::get('/dash',[HomeController::class, 'dash']);

@@ -40,6 +40,19 @@
                     <li class="nav-item">
                         <a class="nav-link me-2" href="contact.php">Contact</a>
                     </li>
+                    @if (Route::has('login'))
+                    @auth
+                    <li class="nav-item">
+                        <a class="btn btn-danger me-2" href="/dash">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+                @else
                 </ul>
                 <div class="d-flex">
                     <button type="button" class="btn btn-danger me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -49,6 +62,8 @@
                         Register
                     </button>
                 </div>
+                @endauth
+                @endif
             </div>
         </div>
     </nav>
@@ -84,7 +99,8 @@
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" style="width: 400px;">
             <div class="modal-content registerModal">
-                <form>
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
                     <div class="p-3 d-flex justify-content-between">
                         <div></div>
                         <div class="bg-white p-1 d-flex justify-content-center align-items-center rounded-circle" style="height: 100px; width: 100px;">
@@ -95,32 +111,30 @@
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="mb-3">
-                                <label class="form-label text-white">Name</label>
-                                <input type="text" class="form-control bg-light shadow-none">
+                                <label for="name" value="{{ __('Name') }}" class="form-label text-white">Name</label>
+                                <input type="text" id="name" name="name" :value="old('name')" class="form-control bg-light shadow-none">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Email</label>
-                                <input type="email" class="form-control bg-light shadow-none">
+                                <label for="email" value="{{ __('Email') }}" class="form-label text-white">Email</label>
+                                <input id="email" type="email" name="email" :value="old('email')" class="form-control bg-light shadow-none">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Phone</label>
-                                <input type="number" class="form-control bg-light shadow-none">
+                                <label for="phone" value="{{ __('phone') }}" class="form-label text-white">Phone</label>
+                                <input id="phone" name="phone" :value="old('phone')" type="number" class="form-control bg-light shadow-none">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Address</label>
-                                <textarea rows="1" class="form-control bg-light shadow-none"></textarea>
+                                <label for="address" value="{{ __('address') }}" class="form-label text-white">Address</label>
+                                <input id="address" type="text" name="address" :value="old('address')" class="form-control bg-light shadow-none">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Password</label>
-                                <input type="password" class="form-control bg-light shadow-none">
+                                <label for="password" value="{{ __('Password') }}" class="form-label text-white">Password</label>
+                                <input id="password" name="password" type="password" class="form-control bg-light shadow-none">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Confirm Password</label>
-                                <input type="password" class="form-control bg-light shadow-none">
+                                <label for="password_confirmation" value="{{ __('Confirm Password') }}" class="form-label text-white">Confirm Password</label>
+                                <input id="password_confirmation" type="password" name="password_confirmation" type="password" class="form-control bg-light shadow-none">
                             </div>
-                            <div class="mb-3">
-                                <input type="submit" value="Register" class="btn btn-danger form-control">
-                            </div>
+                            <button type="submit" class="btn btn-danger form-control">Register</button>
                         </div>
                     </div>
                 </form>
