@@ -76,7 +76,7 @@
                         </div>
                         <button type="submit" class="btn btn-danger form-control">Login</button>
                     </div>
-                    </form>
+                </form>
             </div>
         </div>
     </div>
