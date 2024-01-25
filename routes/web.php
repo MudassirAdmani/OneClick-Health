@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -26,3 +23,13 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+// Routes
+
+// login route
+
+Route::get('/redirect',[HomeController::class, 'redirect']);
+
+// default route
+
+Route::get('/',[HomeController::class, 'index']);
