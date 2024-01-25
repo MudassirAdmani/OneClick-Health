@@ -31,3 +31,15 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+/* Availability Form */
+.AvailabilityForm {
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+}
+@media (max-width: 575px) {
+    .AvailabilityForm {
+        margin-top: 25px;
+        padding: 0 35px;
+    }
+}
