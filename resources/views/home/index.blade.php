@@ -56,8 +56,9 @@
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" style="width: 400px;">
             <div class="modal-content loginModal">
-                <form method="post" action="backend/register.php">
+                <form method="POST" action="{{ route('login') }}">
                     <div class="p-3 d-flex justify-content-between">
+                        @csrf
                         <div></div>
                         <div class="bg-white p-1 d-flex justify-content-center align-items-center rounded-circle" style="height: 100px; width: 100px;">
                             <img src="images/logo/logo1.png" alt="" class="img-fluid">
@@ -66,16 +67,16 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label class="form-label text-white">Email address</label>
-                            <input type="email" name="logEmail" class="form-control shadow-none" required>
+                            <label for="email" value="{{ __('Email') }}" class="form-label text-white">Email address</label>
+                            <input id="email" type="email" name="email" :value="old('email')" class="form-control shadow-none" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label text-white">Password</label>
-                            <input type="password" name="logPass" class="form-control shadow-none" required>
+                            <label for="password" value="{{ __('Password') }}" class="form-label text-white">Password</label>
+                            <input id="password" type="password" name="password" class="form-control shadow-none" required>
                         </div>
-                        <button type="submit" name="logBtn" class="btn btn-danger form-control">Login</button>
+                        <button type="submit" class="btn btn-danger form-control">Login</button>
                     </div>
-                </form>
+                    </form>
             </div>
         </div>
     </div>

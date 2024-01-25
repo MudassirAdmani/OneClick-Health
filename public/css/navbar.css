@@ -35,3 +35,8 @@ input::-webkit-inner-spin-button {
 .banner {
     height: 500px;
 }
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+    }
+}

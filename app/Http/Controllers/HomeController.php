@@ -22,6 +22,6 @@ class HomeController extends Controller
     // default page
     public function index()
     {
-        return view('welcome');
+        return view('home.index');
     }
 }
