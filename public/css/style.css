@@ -13,3 +13,9 @@
     height: 2px;
     margin: 0 auto;
 }
+.btn-gray {
+    background-color: #7d8593;
+}
+.btn-gray:hover {
+    background-color: #5e636f;
+}

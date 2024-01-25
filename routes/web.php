@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,12 +27,18 @@ Route::middleware([
 
 // login route
 
-Route::get('/redirect',[HomeController::class, 'redirect']);
+Route::get('/redirect', function () {
+    return view('home.index');
+});
 
 // default route
 
-Route::get('/',[HomeController::class, 'index']);
+Route::get('/', function () {
+    return view('home.index');
+});
 
 // dashboard route
 
-Route::get('/dash',[HomeController::class, 'dash']);
+Route::get('/dash', function () {
+    return view('dashboard.index');
+});

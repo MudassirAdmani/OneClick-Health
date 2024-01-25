@@ -43,7 +43,7 @@
                     @if (Route::has('login'))
                     @auth
                     <li class="nav-item">
-                        <a class="btn btn-primary me-2" href="/dash">Dashboard</a>
+                        <a class="btn btn-gray text-white me-2" href="/dash">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <form action="{{route('logout')}}" method="post">
