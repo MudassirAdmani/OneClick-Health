@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- CSS -->
@@ -14,10 +16,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md bg-gray">
+        <div class="container-fluid">
+            <h3 class="text-white my-auto ms-2">
+                Mudassir
+            </h3>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bi bi-x-lg text-white"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-md-row ms-auto">
+                    <li class="nav-item mx-1 mt-2 mt-md-0 mb-2 mb-md-0">
+                        <button class="btn-sm btn btn-success form-control form-control-sm">
+                            Profile
+                        </button>
+                    </li>
+                    <li class="mx-1 nav-item mt-lg-0 mb-2 mb-md-0">
+                        <button class="btn btn-sm btn-danger form-control form-control-sm">
+                            Logout
+                        </button>
+                    </li>
+                    <li class="nav-item mx-1 mt-lg-0 mb-2 mb-md-0">
+                        <button class="btn btn-sm btn-danger d-lg-none form-control form-control-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            Open Menu
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 p-3 bg-gray d-none d-md-block">
+            <div class="col-md-2 p-3 bg-gray d-none d-lg-block">
                 <div class="bg-white p-1 mx-auto d-flex justify-content-center align-items-center rounded-circle" style="height: 80px; width: 80px;">
                     <img src="images/logo/logo2.png" alt="" class="img-fluid">
                 </div>
@@ -55,6 +88,11 @@
                         </li>
                         <li class="nav-item mt-4">
                             <a class="form-control btn btn-danger" href="#">
+                                Add Insurance
+                            </a>
+                        </li>
+                        <li class="nav-item mt-4">
+                            <a class="form-control btn btn-danger" href="#">
                                 View Insurance
                             </a>
                         </li>
@@ -71,8 +109,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12 d-md-none">
-                <div class="offcanvas p-3 bg-gray offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+
+            <div class="col-12 d-lg-none">
+                <div style="width: 250px;" class="offcanvas p-3 bg-gray offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="d-flex justify-content-between">
                         <div></div>
                         <div class="bg-white p-1 d-flex justify-content-center align-items-center rounded-circle" style="height: 80px; width: 80px;">
@@ -132,39 +171,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-10">
-                <nav class="navbar navbar-expand-lg bg-gray">
-                    <div class="container-fluid">
-                        <span class="text-white me-auto">
-                            OneClick Health
-                        </span>
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <button>
-                                        Profile
-                                    </button>
-                                </li>
-                                <li class="nav-item">
-                                    <button>
-                                        Logout
-                                    </button>
-                                </li>
-                                <li class="nav-item">
-                                    <button class="btn btn-danger d-md-none form-control" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                                        Open Menu
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
             </div>
         </div>
     </div>
