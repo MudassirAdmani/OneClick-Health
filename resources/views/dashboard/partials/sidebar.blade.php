@@ -1,10 +1,7 @@
 <div class="col-md-2 p-3 bg-gray d-none d-lg-block">
-    <div class="bg-white p-1 mx-auto d-flex justify-content-center align-items-center rounded-circle" style="height: 80px; width: 80px;">
-        <img src="images/logo/logo2.png" alt="" class="img-fluid">
-    </div>
     <div class="position-sticky">
         <ul class="navbar-nav flex-column">
-            <li class="nav-item mt-4">
+            <li class="nav-item">
                 <a class="form-control btn btn-danger" href="#">
                     Add Doctors
                 </a>
@@ -70,7 +67,7 @@
             <ul class="navbar-nav flex-column">
                 <ul class="navbar-nav flex-column">
                     <li class="nav-item mt-4">
-                        <a class="form-control btn btn-danger" href="{{ route('adddoctor') }}">
+                        <a class="form-control btn btn-danger" href="#">
                             Add Doctors
                         </a>
                     </li>
