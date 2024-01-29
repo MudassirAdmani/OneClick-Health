@@ -25,10 +25,6 @@
                             <input id="phone" name="phone" :value="old('phone')" type="number" class="form-control bg-light shadow-none">
                         </div>
                         <div class="mb-3">
-                            <label for="address" value="{{ __('address') }}" class="form-label text-white">Address</label>
-                            <input id="address" type="text" name="address" :value="old('address')" class="form-control bg-light shadow-none">
-                        </div>
-                        <div class="mb-3">
                             <label for="password" value="{{ __('Password') }}" class="form-label text-white">Password</label>
                             <input id="password" name="password" type="password" class="form-control bg-light shadow-none">
                         </div>
