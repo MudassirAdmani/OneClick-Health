@@ -18,7 +18,7 @@ return new class extends Migration
             $table->dateTime('expiry');
             $table->timestamps();
             // Define foreign key constraint
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

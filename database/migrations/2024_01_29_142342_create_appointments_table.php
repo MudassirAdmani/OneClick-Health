@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('doctor_id');
+            $table->unsignedBigInteger('user_id');
+            $table->string('type');
+            $table->date('date');
+            $table->time('time');
+            $table->integer('charges');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('doctor_id')->references('id')->on('users');
         });
     }
 
