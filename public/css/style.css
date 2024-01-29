@@ -5,9 +5,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-.h-font {
-    font-family: "Merienda", cursive;
-}
 .h-line {
     width: 150px;
     height: 2px;
@@ -15,4 +12,7 @@
 }
 .bg-gray {
     background-color: #45494e;
+}
+.bg-gray {
+    background-color: #eceff2;
 }
