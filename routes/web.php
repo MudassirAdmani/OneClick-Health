@@ -23,8 +23,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-// Routes
-
 // login route
 
 Route::get('/redirect', function () {
@@ -41,4 +39,16 @@ Route::get('/', function () {
 
 Route::get('/dash', function () {
     return view('dashboard.index');
+});
+
+// Home Route
+
+Route::get('/home', function () {
+    return view('home.index');
+});
+
+// Contact Route
+
+Route::get('/contact', function () {
+    return view('home.contact');
 });
