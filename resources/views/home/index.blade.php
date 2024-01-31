@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Navbar -->
     <link rel="stylesheet" href="css/navbar.css">
+    <!-- About -->
+    <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
@@ -29,6 +31,8 @@
     @include('home.partials.carousel')
     <!-- Availability -->
     @include('home.partials.availability')
+    <!-- About -->
+    @include('home.partials.about')
     <!-- Insurance -->
     @include('home.partials.insurance')
     <!-- Footer -->
