@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,37 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-
-// login route
-
-Route::get('/redirect', function () {
-    return view('home.index');
-});
-
-// default route
-
-Route::get('/', function () {
-    return view('home.index');
-});
-
-// dashboard route
-
-Route::get('/dash', function () {
-    return view('dashboard.index');
-});
-
 // Home Route
 
-Route::get('/home', function () {
+// Default Route
+
+Route::get('/', function () {
     return view('home.index');
 });
 
@@ -52,3 +27,33 @@ Route::get('/home', function () {
 Route::get('/contact', function () {
     return view('home.contact');
 });
+
+// Dashboard Route
+
+// Default Route
+
+Route::get('/dash', function () {
+    return view('dashboard.index');
+});
+
+// User Crud
+
+// Fetch
+Route::get('/showuser', [AdminController::class, 'showuser']);
+
+// Add
+Route::get('/adduser', function() {
+    return view('dashboard.adduser');
+});
+
+// Create
+Route::post('/createuser', [AdminController::class, 'createuser']);
+
+// Delete
+Route::get('/deleteuser/{id}', [AdminController::class, 'deleteuser']);
+
+// Edit
+Route::get('/edituser/{id}', [AdminController::class, 'edituser']);
+
+// Update
+Route::post('/updateuser/{id}', [AdminController::class, 'updateuser']);

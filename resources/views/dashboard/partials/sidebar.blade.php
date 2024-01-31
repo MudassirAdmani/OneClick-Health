@@ -57,7 +57,7 @@
             <span class="nav-link">Navigation</span>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="/admindashboard">
+            <a class="nav-link" href="/dash">
                 <span class="menu-icon">
                     <i class="mdi mdi-speedometer"></i>
                 </span>
@@ -65,19 +65,19 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="/addproduct">
+            <a class="nav-link" href="/adduser">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document-box"></i>
                 </span>
-                <span class="menu-title">Add New Product</span>
+                <span class="menu-title">Add User</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="/showproduct">
+            <a class="nav-link" href="/showuser">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document-box"></i>
                 </span>
-                <span class="menu-title">Show All Product</span>
+                <span class="menu-title">Show User</span>
             </a>
         </li>
         <li class="nav-item menu-items">
