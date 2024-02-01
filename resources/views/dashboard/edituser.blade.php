@@ -49,11 +49,11 @@
                     @csrf
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Name</label>
-                        <input type="text" class="form-control" name="name" value="{{ $data->name }}" placeholder="User Name" required>
+                        <input type="text" class="form-control" name="name" placeholder="User Name" value="{{ $data->name }}" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Email</label>
-                        <input type="email" class="form-control" name="email" value="{{ $data->email }}" placeholder="User Email" required>
+                        <input type="email" class="form-control" name="email" placeholder="User Email" value="{{ $data->email }}" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Password</label>
@@ -61,15 +61,11 @@
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Usertype</label>
-                        <input type="text" class="form-control" name="usertype" value="{{ $data->usertype }}" placeholder="User Type" required>
+                        <input type="text" class="form-control" name="usertype" placeholder="User Type" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Old Image</label><br>
-                        <img src="/userimages/{{ $data->image }}" width="100" height="100" style="object-fit: cover">
-                    </div>
-                    <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">New Image</label>
-                        <input type="file" class="form-control" name="file">
+                        <label class="form-label text-white">Phone</label>
+                        <input type="text" class="form-control" name="phone" placeholder="User Phone" required>
                     </div>
                     <div class="col-6 p-3 mx-auto text-white">
                         <input type="file" class="form-control" name="file">

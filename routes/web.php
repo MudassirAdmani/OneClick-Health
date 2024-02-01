@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
 // Home Route
 
 // Default Route
@@ -42,7 +52,7 @@ Route::get('/dash', function () {
 Route::get('/showuser', [AdminController::class, 'showuser']);
 
 // Add
-Route::get('/adduser', function() {
+Route::get('/adduser', function () {
     return view('dashboard.adduser');
 });
 
@@ -54,6 +64,3 @@ Route::get('/deleteuser/{id}', [AdminController::class, 'deleteuser']);
 
 // Edit
 Route::get('/edituser/{id}', [AdminController::class, 'edituser']);
-
-// Update
-Route::post('/updateuser/{id}', [AdminController::class, 'updateuser']);
