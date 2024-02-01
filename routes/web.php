@@ -64,3 +64,6 @@ Route::get('/deleteuser/{id}', [AdminController::class, 'deleteuser']);
 
 // Edit
 Route::get('/edituser/{id}', [AdminController::class, 'edituser']);
+
+// Update
+Route::post('/updateuser/{id}', [AdminController::class, 'updateuser']);

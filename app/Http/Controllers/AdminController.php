@@ -45,4 +45,22 @@ class AdminController extends Controller
         $data = User::find($id);
         return view('dashboard.edituser', compact('data'));
     }
+
+    // Update
+    public function updateuser(Request $request, $id)
+    {
+        $data = User::find($id);
+        $image = $request->file;
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $request->file->move('userimages', $imagename);
+            $data->image = $imagename;
+        }
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->phone = $request->phone;
+        $data->usertype = $request->usertype;
+        $data->save();
+        return redirect()->back()->with('Message', 'Product Updated Successfully');
+    }
 }
