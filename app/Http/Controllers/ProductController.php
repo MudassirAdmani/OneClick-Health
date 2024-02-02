@@ -56,9 +56,8 @@ class ProductController extends Controller
             $data->image = $imagename;
         }
         $data->name = $request->name;
-        $data->email = $request->email;
-        $data->phone = $request->phone;
-        $data->usertype = $request->usertype;
+        $data->price = $request->price;
+        $data->stock = $request->stock;
         $data->save();
         return redirect()->back()->with('Message', 'Product Updated Successfully');
     }

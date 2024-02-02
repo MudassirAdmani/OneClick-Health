@@ -34,7 +34,7 @@
         <div class="container-fluid page-body-wrapper">
             <div class="container mt-3">
                 <div class="col-12">
-                    <h2 class="text-center">Add User</h2>
+                    <h2 class="text-center">Add Product</h2>
                 </div>
                 <!-- partial -->
                 @if (session()->has('Message'))
@@ -45,27 +45,23 @@
                     </div>
                 </div>
                 @endif
-                <form method="POST" class="text-dark" enctype="multipart/form-data" action="{{ url('updateuser', $data->id) }}">
+                <form method="POST" class="text-dark" enctype="multipart/form-data" action="{{ url('updateproduct', $data->id) }}">
                     @csrf
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Name</label>
                         <input type="text" class="form-control" name="name" value="{{ $data->name }}" placeholder="User Name" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Email</label>
-                        <input type="email" class="form-control" name="email" value="{{ $data->email }}" placeholder="User Email" required>
+                        <label class="form-label text-white">Price</label>
+                        <input type="number" class="form-control" name="price" value="{{ $data->price }}" placeholder="User Phone" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Usertype</label>
-                        <input type="text" class="form-control" name="usertype" value="{{ $data->usertype }}" placeholder="User Type" required>
-                    </div>
-                    <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Phone</label>
-                        <input type="text" class="form-control" name="phone" value="{{ $data->phone }}" placeholder="User Phone" required>
+                        <label class="form-label text-white">Stock</label>
+                        <input type="number" class="form-control" name="stock" value="{{ $data->stock }}" placeholder="User Phone" required>
                     </div>
                     <div class="form-group col-8 mx-auto p-3">
                         <label class="form-label text-white">Old Image</label><br>
-                        <img src="/userimages/{{ $data->image }}" width="100" height="100" style="object-fit: cover">
+                        <img src="/productimages/{{ $data->image }}" width="100" height="100" style="object-fit: cover">
                     </div>
                     <div class="form-group col-8 mx-auto p-3">
                         <label class="form-label text-white">New Image</label>
