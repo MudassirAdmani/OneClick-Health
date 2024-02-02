@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +50,7 @@ Route::get('/dash', function () {
 // User Crud
 
 // Fetch
-Route::get('/showuser', [AdminController::class, 'showuser']);
+Route::get('/showuser', [UserController::class, 'showuser']);
 
 // Add
 Route::get('/adduser', function () {
@@ -57,13 +58,35 @@ Route::get('/adduser', function () {
 });
 
 // Create
-Route::post('/createuser', [AdminController::class, 'createuser']);
+Route::post('/createuser', [UserController::class, 'createuser']);
 
 // Delete
-Route::get('/deleteuser/{id}', [AdminController::class, 'deleteuser']);
+Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser']);
 
 // Edit
-Route::get('/edituser/{id}', [AdminController::class, 'edituser']);
+Route::get('/edituser/{id}', [UserController::class, 'edituser']);
 
 // Update
-Route::post('/updateuser/{id}', [AdminController::class, 'updateuser']);
+Route::post('/updateuser/{id}', [UserController::class, 'updateuser']);
+
+// Product Crud
+
+// Fetch
+Route::get('/showproduct', [ProductController::class, 'showproduct']);
+
+// Add
+Route::get('/addproduct', function () {
+    return view('dashboard.addproduct');
+});
+
+// Create
+Route::post('/createproduct', [ProductController::class, 'createproduct']);
+
+// Delete
+Route::get('/deleteproduct/{id}', [ProductController::class, 'deleteproduct']);
+
+// Edit
+Route::get('/editproduct/{id}', [ProductController::class, 'editproduct']);
+
+// Update
+Route::post('/updateproduct/{id}', [ProductController::class, 'updateproduct']);

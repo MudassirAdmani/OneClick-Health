@@ -2,25 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Pharmacy;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class ProductController extends Controller
 {
     // Fetch
-    public function showuser()
+    public function showproduct()
     {
-        $data = User::all();
-        return view('dashboard.showuser', compact('data'));
+        $data = Pharmacy::all();
+        return view('dashboard.showproduct', compact('data'));
     }
 
     // Create
-    public function createuser(Request $request)
+    public function createproduct(Request $request)
     {
-        $data = new User;
+        $data = new Pharmacy;
         $image = $request->file;
         $imagename = time() . '.' . $image->getClientOriginalExtension();
-        $request->file->move('userimages', $imagename);
+        $request->file->move('productimages', $imagename);
         $data->image = $imagename;
         $data->name = $request->name;
         $data->email = $request->email;
@@ -32,28 +32,28 @@ class AdminController extends Controller
     }
 
     // Delete
-    public function deleteuser($id)
+    public function deleteproduct($id)
     {
-        $data = User::find($id);
+        $data = Pharmacy::find($id);
         $data->delete();
         return redirect()->back()->with('Message', 'User Deleted');
     }
 
     // Edit
-    public function edituser($id)
+    public function editproduct($id)
     {
-        $data = User::find($id);
-        return view('dashboard.edituser', compact('data'));
+        $data = Pharmacy::find($id);
+        return view('dashboard.editproduct', compact('data'));
     }
 
     // Update
-    public function updateuser(Request $request, $id)
+    public function updateproduct(Request $request, $id)
     {
-        $data = User::find($id);
+        $data = Pharmacy::find($id);
         $image = $request->file;
         if ($image) {
             $imagename = time() . '.' . $image->getClientOriginalExtension();
-            $request->file->move('userimages', $imagename);
+            $request->file->move('productimages', $imagename);
             $data->image = $imagename;
         }
         $data->name = $request->name;
