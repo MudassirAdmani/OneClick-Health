@@ -81,19 +81,19 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="/addbanner">
+            <a class="nav-link" href="/addproduct">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document-box"></i>
                 </span>
-                <span class="menu-title">Add New Banner</span>
+                <span class="menu-title">Add Product</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="/showbanner">
+            <a class="nav-link" href="/showproduct">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document-box"></i>
                 </span>
-                <span class="menu-title">Show All Banner</span>
+                <span class="menu-title">Show Product</span>
             </a>
         </li>
     </ul>

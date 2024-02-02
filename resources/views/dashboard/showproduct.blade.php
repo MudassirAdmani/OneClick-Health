@@ -47,10 +47,11 @@
                         <thead>
                             <tr>
                                 <th class="text-white">ID</th>
+                                <th class="text-white">User_id</th>
                                 <th class="text-white">Name</th>
-                                <th class="text-white">Email</th>
-                                <th class="text-white">Usertype</th>
-                                <th class="text-white">Phone</th>
+                                <th class="text-white">Price</th>
+                                <th class="text-white">Stock</th>
+                                <th class="text-white">Image</th>
                                 <th class="text-white">Actions</th>
                             </tr>
                         </thead>
@@ -58,19 +59,14 @@
                             @foreach ($data as $user)
                             <tr>
                                 <td class="text-white">{{ $user->id }}</td>
+                                <td class="text-white">{{ $user->user_id }}</td>
                                 <td class="text-white">{{ $user->name }}</td>
-                                <td class="text-white">{{ $user->email }}</td>
+                                <td class="text-white">{{ $user->price }}</td>
+                                <td class="text-white">{{ $user->stock }}</td>
+                                <td class="text-white"><img src="/productimages/{{ $user->image }}" style="object-fit: cover; border-radius:0;"></td>
                                 <td class="text-white">
-                                    @if($user->usertype == 1)
-                                    Admin
-                                    @else
-                                    User
-                                    @endif
-                                </td>
-                                <td class="text-white">{{ $user->phone }}</td>
-                                <td class="text-white">
-                                    <a href="{{ url('/edituser', $user->id) }}" class="btn-sm btn btn-success">Edit</a>
-                                    <a href="{{ url('/deleteuser', $user->id) }}" class="btn-sm btn btn-danger">Delete</a>
+                                    <a href="{{ url('/editproduct', $user->id) }}" class="btn-sm btn btn-success">Edit</a>
+                                    <a href="{{ url('/deleteproduct', $user->id) }}" class="btn-sm btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             @endforeach

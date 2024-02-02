@@ -23,12 +23,11 @@ class ProductController extends Controller
         $request->file->move('productimages', $imagename);
         $data->image = $imagename;
         $data->name = $request->name;
-        $data->email = $request->email;
-        $data->password = $request->pass;
-        $data->usertype = $request->usertype;
-        $data->phone = $request->phone;
+        $data->price = $request->price;
+        $data->stock = $request->stock;
+        $data->user_id = auth()->user()->id;
         $data->save();
-        return redirect()->back()->with('Message', 'User Added Successfully');
+        return redirect()->back()->with('Message', 'Product Added Successfully');
     }
 
     // Delete
@@ -36,7 +35,7 @@ class ProductController extends Controller
     {
         $data = Pharmacy::find($id);
         $data->delete();
-        return redirect()->back()->with('Message', 'User Deleted');
+        return redirect()->back()->with('Message', 'Product Deleted');
     }
 
     // Edit

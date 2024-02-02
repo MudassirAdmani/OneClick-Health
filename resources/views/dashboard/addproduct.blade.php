@@ -45,27 +45,19 @@
                     </div>
                 </div>
                 @endif
-                <form method="POST" class="text-dark" enctype="multipart/form-data" action="{{ url('createuser') }}">
+                <form method="POST" class="text-dark" enctype="multipart/form-data" action="{{ url('createproduct') }}">
                     @csrf
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="User Name" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="User Email" required>
+                        <label class="form-label text-white">Price</label>
+                        <input type="number" class="form-control" name="price" placeholder="User Phone" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Password</label>
-                        <input type="password" class="form-control" name="pass" placeholder="User Password" required>
-                    </div>
-                    <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Usertype</label>
-                        <input type="text" class="form-control" name="usertype" placeholder="User Type" required>
-                    </div>
-                    <div class="form-group col-6 mx-auto p-3">
-                        <label class="form-label text-white">Phone</label>
-                        <input type="text" class="form-control" name="phone" placeholder="User Phone" required>
+                        <label class="form-label text-white">Stock</label>
+                        <input type="number" class="form-control" name="stock" placeholder="User Phone" required>
                     </div>
                     <div class="col-6 p-3 mx-auto text-white">
                         <input type="file" class="form-control" name="file">

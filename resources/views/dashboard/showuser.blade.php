@@ -51,6 +51,7 @@
                                 <th class="text-white">Email</th>
                                 <th class="text-white">Usertype</th>
                                 <th class="text-white">Phone</th>
+                                <th class="text-white">Image</th>
                                 <th class="text-white">Actions</th>
                             </tr>
                         </thead>
@@ -68,6 +69,7 @@
                                     @endif
                                 </td>
                                 <td class="text-white">{{ $user->phone }}</td>
+                                <td class="text-white"><img src="/userimages/{{ $user->image }}" style="object-fit: cover; border-radius:0;"></td>
                                 <td class="text-white">
                                     <a href="{{ url('/edituser', $user->id) }}" class="btn-sm btn btn-success">Edit</a>
                                     <a href="{{ url('/deleteuser', $user->id) }}" class="btn-sm btn btn-danger">Delete</a>
