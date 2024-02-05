@@ -1,58 +1,45 @@
 <div class="container">
     <h2 class="text-center my-4">Insurance Plans</h2>
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="bg-danger d-flex justify-content-center align-items-center py-3">
-                <h4 class="text-white">Pro Plan</h4>
-            </div>
-            <div class="border border-1 border-danger">
-                <div class="bg-flour py-4">
-                    <h2 class="text-center">10$ / Month</h2>
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="shadow">
+                <div class="bg-danger rounded-top p-2">
+                    <h3 class="text-center text-white">Basic Plan</h3>
                 </div>
-                <div class="text-center">
-                    <p class="border-bottom pt-4 border-1">Unlimited Use</p>
-                    <p class="border-bottom pt-2 border-1">Unlimited Use</p>
-                    <p class="border-bottom pt-2 border-1">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold mt-3">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold">Unlimited Use</p>
+                <div class="bg-danger rounded-bottom p-2">
+                    <h3 class="text-center text-white">10$/Month</h3>
                 </div>
-            </div>
-            <div class="bg-danger d-flex justify-content-center align-items-center py-3">
-                <h4 class="text-white">Buy Now</h4>
             </div>
         </div>
-        <div class="col-lg-4 mt-3 mt-lg-0">
-            <div class="bg-primary d-flex justify-content-center align-items-center py-3">
-                <h4 class="text-white">Pro Plan</h4>
-            </div>
-            <div class="border border-1 border-primary">
-                <div class="bg-flour py-4">
-                    <h2 class="text-center">10$ / Month</h2>
+        <div class="col-1"></div>
+        <div class="col-3">
+            <div class="shadow">
+                <div class="bg-danger rounded-top p-2">
+                    <h3 class="text-center text-white">Basic Plan</h3>
                 </div>
-                <div class="text-center">
-                    <p class="border-bottom pt-4 border-1">Unlimited Use</p>
-                    <p class="border-bottom pt-2 border-1">Unlimited Use</p>
-                    <p class="border-bottom pt-2 border-1">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold mt-3">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold">Unlimited Use</p>
+                <div class="bg-danger rounded-bottom p-2">
+                    <h3 class="text-center text-white">10$/Month</h3>
                 </div>
-            </div>
-            <div class="bg-primary d-flex justify-content-center align-items-center py-3">
-                <h4 class="text-white">Buy Now</h4>
             </div>
         </div>
-        <div class="col-lg-4 mt-3 mt-lg-0">
-            <div class="bg-success d-flex justify-content-center align-items-center py-3">
-                <h4 class="text-white">Pro Plan</h4>
-            </div>
-            <div class="border border-1 border-success">
-                <div class="bg-flour py-4">
-                    <h2 class="text-center">10$ / Month</h2>
+        <div class="col-1"></div>
+        <div class="col-3">
+            <div class="shadow">
+                <div class="bg-danger rounded-top p-2">
+                    <h3 class="text-center text-white">Basic Plan</h3>
                 </div>
-                <div class="text-center">
-                    <p class="border-bottom pt-4 border-1">Unlimited Use</p>
-                    <p class="border-bottom pt-2 border-1">Unlimited Use</p>
-                    <p class="border-bottom pt-2 border-1">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold mt-3">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold">Unlimited Use</p>
+                <p class="border-bottom text-center fw-bold">Unlimited Use</p>
+                <div class="bg-danger rounded-bottom p-2">
+                    <h3 class="text-center text-white">10$/Month</h3>
                 </div>
-            </div>
-            <div class="bg-success d-flex justify-content-center align-items-center py-3">
-                <h4 class="text-white">Buy Now</h4>
             </div>
         </div>
     </div>

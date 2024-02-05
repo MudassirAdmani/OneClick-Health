@@ -47,6 +47,12 @@ Route::get('/dash', function () {
     return view('dashboard.index');
 });
 
+// Membership Route
+
+Route::get('/membership', function () {
+    return view('dashboard.membership');
+});
+
 // User Crud
 
 // Fetch
