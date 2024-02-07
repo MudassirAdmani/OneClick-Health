@@ -101,4 +101,4 @@ Route::post('/updateproduct/{id}', [ProductController::class, 'updateproduct']);
 // Insurance Crud
 
 // Add
-Route::get('/addinsurance/{plan}', [InsuranceController::class, 'addinsurance']);
+Route::get('/addinsurance/{plan}/{price}', [InsuranceController::class, 'addinsurance']);
