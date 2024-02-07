@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InsuranceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
@@ -96,3 +97,8 @@ Route::get('/editproduct/{id}', [ProductController::class, 'editproduct']);
 
 // Update
 Route::post('/updateproduct/{id}', [ProductController::class, 'updateproduct']);
+
+// Insurance Crud
+
+// Add
+Route::get('/addinsurance/{plan}', [InsuranceController::class, 'addinsurance']);
