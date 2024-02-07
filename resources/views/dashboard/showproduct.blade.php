@@ -36,7 +36,7 @@
                 <!-- partial -->
                 @if (session()->has('Message'))
                 <div class="col-8 mx-auto">
-                    <div class="alert alert-success alert-dismissible">
+                    <div class="alert alert-danger alert-dismissible">
                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         {{ session()->get('Message') }}
                     </div>

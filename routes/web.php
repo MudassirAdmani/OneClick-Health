@@ -100,5 +100,11 @@ Route::post('/updateproduct/{id}', [ProductController::class, 'updateproduct']);
 
 // Insurance Crud
 
+// Fetch
+Route::get('/showinsurance', [InsuranceController::class, 'showinsurance']);
+
 // Add
 Route::get('/addinsurance/{plan}/{price}', [InsuranceController::class, 'addinsurance']);
+
+// Delete
+Route::get('/deleteinsurance/{id}', [InsuranceController::class, 'deleteinsurance']);

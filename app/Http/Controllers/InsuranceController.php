@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class InsuranceController extends Controller
 {
+    // Add
     public function addinsurance($plan, $price)
     {
         if (Auth::check()) {
@@ -22,5 +23,20 @@ class InsuranceController extends Controller
             // If the user is not logged in, redirect back with an alert
             return back()->with('alert', 'Please login');
         }
+    }
+
+    // Fetch
+    public function showinsurance()
+    {
+        $data = Insurance::all();
+        return view('dashboard.showinsurance', compact('data'));
+    }
+
+    // Delete
+    public function deleteinsurance($id)
+    {
+        $data = Insurance::find($id);
+        $data->delete();
+        return redirect()->back()->with('Message', 'Insurance Deleted');
     }
 }

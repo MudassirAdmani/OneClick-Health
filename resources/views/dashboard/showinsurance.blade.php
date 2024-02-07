@@ -47,32 +47,21 @@
                         <thead>
                             <tr>
                                 <th class="text-white">ID</th>
+                                <th class="text-white">User Id</th>
                                 <th class="text-white">Name</th>
-                                <th class="text-white">Email</th>
-                                <th class="text-white">Usertype</th>
-                                <th class="text-white">Phone</th>
-                                <th class="text-white">Image</th>
-                                <th class="text-white">Actions</th>
+                                <th class="text-white">Price</th>
+                                <th class="text-white">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($data as $user)
                             <tr>
                                 <td class="text-white">{{ $user->id }}</td>
+                                <td class="text-white">{{ $user->user_id }}</td>
                                 <td class="text-white">{{ $user->name }}</td>
-                                <td class="text-white">{{ $user->email }}</td>
+                                <td class="text-white">{{ $user->price }}</td>
                                 <td class="text-white">
-                                    @if($user->usertype == 1)
-                                    Admin
-                                    @else
-                                    User
-                                    @endif
-                                </td>
-                                <td class="text-white">{{ $user->phone }}</td>
-                                <td class="text-white"><img src="/userimages/{{ $user->image }}" style="object-fit: cover; border-radius:0;"></td>
-                                <td class="text-white">
-                                    <a href="{{ url('/edituser', $user->id) }}" class="btn-sm btn btn-success">Edit</a>
-                                    <a href="{{ url('/deleteuser', $user->id) }}" class="btn-sm btn btn-danger">Delete</a>
+                                    <a href="{{ url('/deleteinsurance', $user->id) }}" class="btn-sm btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             @endforeach
