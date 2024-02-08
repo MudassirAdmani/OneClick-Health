@@ -17,6 +17,9 @@ class MembershipController extends Controller
         $expiryDate = Carbon::now()->addDays(30);
         $data->expiry = $expiryDate;
         $data->save();
+        $user = auth()->user();
+        $user->usertype = 'seller';
+        $user->save();
         return redirect()->back()->with('success', 'Membership Bought');
     }
 }
