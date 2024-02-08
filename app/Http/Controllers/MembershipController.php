@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Membership;
 use Carbon\Carbon;
+use App\Models\User;
+use App\Models\Membership;
 use Illuminate\Http\Request;
 
 class MembershipController extends Controller
@@ -17,9 +18,7 @@ class MembershipController extends Controller
         $expiryDate = Carbon::now()->addDays(30);
         $data->expiry = $expiryDate;
         $data->save();
-        $user = auth()->user();
-        $user->usertype = 'seller';
-        $user->save();
+        auth()->user()->update(['usertype' => 'seller']);
         return redirect()->back()->with('success', 'Membership Bought');
     }
 }
