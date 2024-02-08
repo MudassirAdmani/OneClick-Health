@@ -49,23 +49,27 @@
                     @csrf
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="User Name" required>
+                        <input type="text" class="text-white form-control" name="name" placeholder="User Name" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="User Email" required>
+                        <input type="email" class="text-white form-control" name="email" placeholder="User Email" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Password</label>
-                        <input type="password" class="form-control" name="pass" placeholder="User Password" required>
+                        <input type="password" class="text-white form-control" name="pass" placeholder="User Password" required>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Usertype</label>
-                        <input type="text" class="form-control" name="usertype" placeholder="User Type" required>
+                        <select class="text-white form-control" name="usertype" required>
+                            <option value="user">User</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="admin">Admin</option>
+                        </select>
                     </div>
                     <div class="form-group col-6 mx-auto p-3">
                         <label class="form-label text-white">Phone</label>
-                        <input type="text" class="form-control" name="phone" placeholder="User Phone" required>
+                        <input type="text" class="text-white form-control" name="phone" placeholder="User Phone" required>
                     </div>
                     <div class="col-6 p-3 mx-auto text-white">
                         <input type="file" class="form-control" name="file">
