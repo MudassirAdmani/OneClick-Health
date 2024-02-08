@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="dashboard/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="dashboard/assets/images/favicon.png" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -32,18 +34,59 @@
         <!-- partial:partials/_navbar.html -->
         @include('dashboard.partials.navbar')
         <div class="container-fluid page-body-wrapper">
-            <div class="container">
-                <!-- partial -->
-                @if (session()->has('Message'))
+            <div class="container mt-3">
+                <h2 class="text-center my-4">Membership Plans</h2>
+                @if (session()->has('success'))
                 <div class="col-8 mx-auto">
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        {{ session()->get('Message') }}
+                        {{ session()->get('success') }}
                     </div>
                 </div>
                 @endif
-                <div class="col-8 mx-auto mt-3">
-                    
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <div class="border shadow-sm rounded p-4">
+                            <h5>Basic</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <h3><span class="fw-bold">10$</span><span class="h6 fw-bold">/month</span></h3>
+                            <a href="{{ url('/addmembership', ['plan' => 'Basic', 'price' => 10]) }}" class="btn btn-danger bg-danger form-control">Get Started</a>
+                            <hr>
+                            <h5>What's Included</h5>
+                            <p><i class="bi bi-check-lg text-success"></i>Service 1</p>
+                            <p><i class="bi bi-check-lg text-success"></i>Service 2</p>
+                            <p><i class="bi bi-x-lg text-danger"></i>Service 3</p>
+                            <p><i class="bi bi-x-lg text-danger"></i>Service 4</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="border shadow-sm rounded p-4">
+                            <h5>Pro</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <h3><span class="fw-bold">20$</span><span class="h6 fw-bold">/month</span></h3>
+                            <a href="{{ url('/addmembership', ['plan' => 'Pro', 'price' => 20]) }}" class="btn btn-danger bg-danger form-control">Get Started</a>
+                            <hr>
+                            <h5>What's Included</h5>
+                            <p><i class="bi bi-check-lg text-success"></i>Service 1</p>
+                            <p><i class="bi bi-check-lg text-success"></i>Service 2</p>
+                            <p><i class="bi bi-x-lg text-danger"></i>Service 3</p>
+                            <p><i class="bi bi-x-lg text-danger"></i>Service 4</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="border shadow-sm rounded p-4">
+                            <h5>Premium</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <h3><span class="fw-bold">30$</span><span class="h6 fw-bold">/month</span></h3>
+                            <a href="{{ url('/addmembership', ['plan' => 'Premium', 'price' => 30]) }}" class="btn btn-danger bg-danger form-control">Get Started</a>
+                            <hr>
+                            <h5>What's Included</h5>
+                            <p><i class="bi bi-check-lg text-success"></i>Service 1</p>
+                            <p><i class="bi bi-check-lg text-success"></i>Service 2</p>
+                            <p><i class="bi bi-x-lg text-danger"></i>Service 3</p>
+                            <p><i class="bi bi-x-lg text-danger"></i>Service 4</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- main-panel ends -->

@@ -39,6 +39,7 @@
                         <div class="col-12 grid-margin stretch-card">
                             <div class="card corona-gradient-card">
                                 <div class="card-body py-0 px-0 px-sm-3">
+                                    @if(auth()->user()->usertype == 'user')
                                     <div class="row align-items-center">
                                         <div class="col-4 col-sm-3 col-xl-2">
                                             <img src="dashboard/assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
@@ -53,10 +54,12 @@
                                             </span>
                                         </div>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @if(auth()->user()->usertype == 'admin')
                     <div class="row">
                         <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                             <div class="card">
@@ -139,6 +142,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     <div class="row">
                         <div class="col-md-4 grid-margin stretch-card">
                             <div class="card">
@@ -166,12 +170,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-8 grid-margin stretch-card">
+                        <div class="col-md-4 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-row justify-content-between">
-                                        <h4 class="card-title mb-1">Open Projects</h4>
-                                        <p class="text-muted mb-1">Your data status</p>
+                                        <h4 class="card-title mb-1">Your Insurance</h4>
                                     </div>
                                     <div class="row">
                                         <div class="col-12">
@@ -267,6 +270,19 @@
                                 </div>
                             </div>
                         </div>
+                        @if(auth()->user()->usertype == 'seller')
+                        <div class="col-md-4 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <h4 class="card-title mb-1">Your Products</h4>
+                                    </div>
+                                    <div class="row">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 <!-- content-wrapper ends -->

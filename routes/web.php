@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InsuranceController;
+use App\Http\Controllers\MembershipController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
@@ -48,11 +49,16 @@ Route::get('/dash', function () {
     return view('dashboard.index');
 });
 
-// Membership Route
+// Membership Crud
+
+// Add
 
 Route::get('/membership', function () {
     return view('dashboard.membership');
 });
+
+// Create
+Route::get('/addmembership/{plan}/{price}', [MembershipController::class, 'addmembership']);
 
 // User Crud
 

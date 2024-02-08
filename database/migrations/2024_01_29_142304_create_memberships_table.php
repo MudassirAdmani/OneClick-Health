@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('type');
+            $table->string('name');
+            $table->integer('price');
             $table->dateTime('expiry');
             $table->timestamps();
             // Define foreign key constraint

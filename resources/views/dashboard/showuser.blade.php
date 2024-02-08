@@ -61,13 +61,7 @@
                                 <td class="text-white">{{ $user->id }}</td>
                                 <td class="text-white">{{ $user->name }}</td>
                                 <td class="text-white">{{ $user->email }}</td>
-                                <td class="text-white">
-                                    @if($user->usertype == 1)
-                                    Admin
-                                    @else
-                                    User
-                                    @endif
-                                </td>
+                                <td class="text-white">{{ $user->usertype }}</td>
                                 <td class="text-white">{{ $user->phone }}</td>
                                 <td class="text-white"><img src="/userimages/{{ $user->image }}" style="object-fit: cover; border-radius:0;"></td>
                                 <td class="text-white">
