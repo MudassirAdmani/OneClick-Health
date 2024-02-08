@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('usertype')->default(0);
+            $table->string('usertype')->default('user');
             $table->string('phone')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamp('email_verified_at')->nullable();
