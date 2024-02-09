@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InsuranceController;
 use App\Http\Controllers\MembershipController;
 use Illuminate\Support\Facades\Route;
@@ -31,9 +32,7 @@ Route::middleware([
 
 // Default Route
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 // Contact Route
 
