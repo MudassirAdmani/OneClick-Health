@@ -52,7 +52,6 @@ Route::get('/dash', function () {
 // Membership Crud
 
 // Add
-
 Route::get('/membership', function () {
     return view('dashboard.membership');
 });
