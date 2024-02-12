@@ -21,7 +21,7 @@ class HomeController extends Controller
                     ->where('expiry', '>=', Carbon::now())
                     ->first();
 
-                if (!$membership) 
+                if (!$membership) {
                     // Membership has expired, update usertype to 'user'
                     $user->update(['usertype' => 'user']);
                 }
