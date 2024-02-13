@@ -10,7 +10,7 @@ class ProductController extends Controller
     // Fetch
     public function showproduct()
     {
-        $data = Pharmacy::all();
+        $data = Pharmacy::all()
         return view('dashboard.showproduct', compact('data'));
     }
 
