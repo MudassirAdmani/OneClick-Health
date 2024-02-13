@@ -11,7 +11,7 @@ class ProductController extends Controller
     public function showproduct()
     {
         $data = Pharmacy::all();
-        return view('dashboard.showproduct', compact('data'));
+        return view('dashboard.showproduct', compact('data'))
     }
 
     // Create
