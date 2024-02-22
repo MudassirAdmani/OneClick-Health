@@ -62,7 +62,7 @@
                                 <td class="text-white">{{ $user->name }}</td>
                                 <td class="text-white">{{ $user->email }}</td>
                                 <td class="text-white">{{ $user->usertype }}</td>
-                                <td class="text-white">{{ $user->phone }}</td>
+                                <td class="text-white">{{ $user->phone }}</t
                                 <td class="text-white"><img src="/userimages/{{ $user->image }}" style="object-fit: cover; border-radius:0;"></td>
                                 <td class="text-white">
                                     <a href="{{ url('/edituser', $user->id) }}" class="btn-sm btn btn-success">Edit</a>
